@@ -1,0 +1,134 @@
+@CHARSET "ISO-8859-1";
+
+body>header {
+
+padding: 0px;
+}
+body>header>a>img, body>header a {
+display: inline-block;
+vertical-align: middle;
+padding: 0px 5px;
+font-size: 1.2em;
+}
+body>footer {
+background: #eee;
+padding: 5px;
+margin: 10px 0;
+text-align: center;
+}
+#logged-in-info {
+float: right;
+margin-top: 18px;
+}
+#logged-in-info form {
+display: inline-block;
+margin-right: 10px;
+}
+
+body>aside {
+  float: right;
+  width: 200px;
+  background: #CCC;
+  padding: 15px;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+body>aside h2 {
+  margin: 5px 0px 15px 0px;
+}
+
+body>aside a {
+  display: block;
+  margin: 5px 0px;
+  text-decoration: none;
+}
+
+body>main:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+
+ul#messages li {
+display: block;
+width: 80%;
+margin: 5px auto;
+text-align: center;
+padding: 5px;
+border-radius: 5px;
+}
+ul#messages li.info {
+background: #7f7;
+}
+ul#messages li.error {
+background: #d00;
+color: white;
+}
+
+.formError {
+    color: red;
+    font-style: italic;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+#page-wrapper {
+  width: 640px;
+  background: #FFFFFF;
+  padding: 1em;
+  margin: 1em auto;
+  border-top: 5px solid #69c773;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.8);
+}
+
+h1 {
+  margin-top: 0;
+}
+
+label {
+  display: block;
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+  color: #999999;
+}
+
+input {
+  width: 100%;
+  padding: 0.5em 0.5em;
+  font-size: 1.2em;
+  border-radius: 3px;
+  border: 1px solid #D9D9D9;
+}
+
+button {
+  display: inline-block;
+  border-radius: 3px;
+  border: none;
+  font-size: 0.9rem;
+  padding: 0.5rem 0.8em;
+  background: #69c773;
+  border-bottom: 1px solid #498b50;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+  font-weight: bold;
+  margin: 0;
+  width: 100%;
+  text-align: center;
+}
+
+button:hover, button:focus {
+  opacity: 0.75;
+  cursor: pointer;
+}
+
+button:active {
+  opacity: 1;
+  box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.1) inset;
+}

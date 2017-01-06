@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="layout :: site-head">
+ <!-- Bootstrap core CSS -->
+    <link href="/css/sticky-footer-navbar.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   
+  <title>Login</title>
+</head>
+
+<body>
+
+<header th:replace="layout :: site-header">
+</header> 
+
+
+<div class="container">
+<form method="post" th:object="${loginForm}">
+  
+  <div class="form-group">
+  <label for="username">Username:</label>
+  <input id="username" type="text" name="username" th:value="*{username}" class="form-control" />
+  <span class="formError" th:if="${#fields.hasErrors('username')}"
+                                th:errors="*{username}">Invalid username</span> </div>
+  
+  <div class="form-group"><label for="password" th:value="*{username}">Password:</label>
+  <input id="password" type="password" name="password" th:value="*{password}" class="form-control" />
+  <span class="formError" th:if="${#fields.hasErrors('password')}"
+                                th:errors="*{password}">Invalid password</span>
+</div>
+  
+  <div class="form-group">
+
+<!--    
+  <input type="submit" value="Login"/>
+   <a href="register.html" th:href="@{/users/register}">[Go to Register]</a>  --> 
+<div class="col-sm-offset-2 col-sm-10">
+ <a href="register.html" th:href="@{/users/register}">        <button type="submit" class="btn btn-default"> Submit</button> </a>
+      </div>
+
+
+
+</div>
+</form>
+</div>
+  
+<footer th:replace="layout :: site-footer">
+</footer> 
+
+</body>
+
+</html>
